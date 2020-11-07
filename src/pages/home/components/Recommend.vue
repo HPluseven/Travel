@@ -2,7 +2,7 @@
     <div>
         <div class="title">热销推荐</div>
         <ul>
-            <li class="item border-bottom" v-for="item of recommendList" :key="item.id">
+            <li class="item border-bottom" v-for="item of list" :key="item.id">
                 <img class="item-img" :src="item.imgUrl">
                 <div class="item-info">
                     <p class="item-title">{{item.title}}</p>
@@ -17,29 +17,8 @@
 <script>
 export default {
   name: 'HomeRecommend',
-  data () {
-    return {
-      recommendList: [
-        {
-          id: '0001',
-          imgUrl: 'https://imgs.qunarzz.com/sight/p0/2006/ab/ab68e3ade41dd614a3.water.jpg_200x200_e697a925.jpg',
-          title: '华谊兄弟电影世界',
-          desc: '啊实打实大苏打三大为哇撒大苏打伟大时代'
-        },
-        {
-          id: '0002',
-          imgUrl: 'https://imgs.qunarzz.com/sight/p0/2006/ab/ab68e3ade41dd614a3.water.jpg_200x200_e697a925.jpg',
-          title: '华谊兄弟电影世界',
-          desc: '啊实打实大苏打三大为哇撒大苏打伟大时代'
-        },
-        {
-          id: '0003',
-          imgUrl: 'https://imgs.qunarzz.com/sight/p0/2006/ab/ab68e3ade41dd614a3.water.jpg_200x200_e697a925.jpg',
-          title: '华谊兄弟电影世界',
-          desc: '啊实打实大苏打三大为哇撒大苏打伟大时代'
-        }
-      ]
-    }
+  props: {
+    list: Array
   }
 }
 </script>
